@@ -13,7 +13,7 @@ namespace Sun_Jerry_HW04.Controllers
 {
     public class HomeController : Controller
     {
-        public ViewResult CompanyComponent()
+        public ViewResult Home()
         {
             return View();
         }

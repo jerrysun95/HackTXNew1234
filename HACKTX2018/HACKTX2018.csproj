@@ -20,5 +20,6 @@
   <ItemGroup>
     <Content Remove="Views\Companies\company.component.cshtml" />
     <Content Remove="Views\Companies\CompanyComponent.cshtml" />
+    <Content Remove="Views\Users\Create.cshtml" />
   </ItemGroup>
 </Project>

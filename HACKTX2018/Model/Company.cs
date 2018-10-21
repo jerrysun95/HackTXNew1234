@@ -1,12 +1,15 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿// Name: Jerry Sun
+// Date: Oct 15 2018
+// HW4, MVC Supplier
 
-namespace HACKTX2018.Model
+using System;
+using System.ComponentModel.DataAnnotations;
+namespace HACKTX2018.Models
 {
-    public class Companies
+    public class Company
     {
-        [Display(Name = "Funder ID")]
-        public Int32 CompaniesID { get; set; }
+        [Display(Name = "Startup ID")]
+        public Int32 CompanyID { get; set; }
 
         [Required(ErrorMessage = "Name is required.")]
         [Display(Name = "Name")]
@@ -29,5 +32,7 @@ namespace HACKTX2018.Model
         [Required(ErrorMessage = "Company Value is needed")]
         [Display(Name = "Company Value")]
         public String CompanyValue { get; set; }
+
+
     }
 }

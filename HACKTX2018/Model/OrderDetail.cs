@@ -6,14 +6,14 @@ using System;
 using System.ComponentModel.DataAnnotations;
 namespace HACKTX2018.Models
 {
-    public class User
+    public class OrderDetail
     {
-        [Display(Name = "Startup ID")]
-        public Int32 UserID { get; set; }
+        [Display(Name = "OrderDetail ID")]
+        public Int32 OrderDetailID{ get; set; }
 
-        [Required(ErrorMessage = "Name is required.")]
-        [Display(Name = "Name")]
-        public String Name { get; set; }
+        [Required(ErrorMessage = "Company Name is required.")]
+        [Display(Name = "Company Name")]
+        public String CompanyName { get; set; }
 
         [Required(ErrorMessage = "Email is required")]
         [Display(Name = "Email Address")]
@@ -24,6 +24,10 @@ namespace HACKTX2018.Models
         [Display(Name = "Phone Number")]
         [DisplayFormat(DataFormatString = "{0:###-###-####}", ApplyFormatInEditMode = true)]
         public String PhoneNumber { get; set; }
+
+        [Required(ErrorMessage = "Number of Shares is needed")]
+        [Display(Name = "Share Amount")]
+        public String ShareAmount { get; set; }
 
 
     }
