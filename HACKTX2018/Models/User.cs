@@ -26,7 +26,7 @@ namespace HACKTX2018.Models
         [DisplayFormat(DataFormatString = "{0:###-###-####}", ApplyFormatInEditMode = true)]
         public String PhoneNumber { get; set; }
 
-        public virtual List<Company> Companies { get; set; }
+        public virtual List<Organization> Organizations { get; set; }
 
 
 

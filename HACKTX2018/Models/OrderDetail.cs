@@ -32,7 +32,7 @@ namespace HACKTX2018.Models
         public String ShareAmount { get; set; }
 
         public virtual Order Order { get; set; }
-        public virtual Company Comapny { get; set; }
+        public virtual Organization Organization { get; set; }
 
 
     }

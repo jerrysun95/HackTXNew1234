@@ -11,7 +11,7 @@ namespace HACKTX2018.DAL
 
         public DbSet<Funder> Funders { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<Company> Companies { get; set; }
+        public DbSet<Organization> Organizations { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Order> Orders { get; set; }
 }

@@ -5,12 +5,13 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+
 namespace HACKTX2018.Models
 {
-    public class Company
+    public class Organization
     {
         [Display(Name = "Startup ID")]
-        public Int32 CompanyID { get; set; }
+        public Int32 OrganizationID { get; set; }
 
         [Required(ErrorMessage = "Name is required.")]
         [Display(Name = "Name")]
