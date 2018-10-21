@@ -19,23 +19,6 @@ namespace HACKTX2018.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("HACKTX2018.Model.Order", b =>
-                {
-                    b.Property<int>("OrderID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("FunderID");
-
-                    b.Property<DateTime>("OrderDate");
-
-                    b.HasKey("OrderID");
-
-                    b.HasIndex("FunderID");
-
-                    b.ToTable("Order");
-                });
-
             modelBuilder.Entity("HACKTX2018.Models.Company", b =>
                 {
                     b.Property<int>("CompanyID")
@@ -89,6 +72,23 @@ namespace HACKTX2018.Migrations
                     b.ToTable("Funders");
                 });
 
+            modelBuilder.Entity("HACKTX2018.Models.Order", b =>
+                {
+                    b.Property<int>("OrderID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("FunderID");
+
+                    b.Property<DateTime>("OrderDate");
+
+                    b.HasKey("OrderID");
+
+                    b.HasIndex("FunderID");
+
+                    b.ToTable("Orders");
+                });
+
             modelBuilder.Entity("HACKTX2018.Models.OrderDetail", b =>
                 {
                     b.Property<int>("OrderDetailID")
@@ -117,7 +117,7 @@ namespace HACKTX2018.Migrations
 
                     b.HasIndex("OrderID");
 
-                    b.ToTable("OrderDetail");
+                    b.ToTable("OrderDetails");
                 });
 
             modelBuilder.Entity("HACKTX2018.Models.User", b =>
@@ -140,18 +140,18 @@ namespace HACKTX2018.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("HACKTX2018.Model.Order", b =>
-                {
-                    b.HasOne("HACKTX2018.Models.Funder", "Funder")
-                        .WithMany("Orders")
-                        .HasForeignKey("FunderID");
-                });
-
             modelBuilder.Entity("HACKTX2018.Models.Company", b =>
                 {
                     b.HasOne("HACKTX2018.Models.User", "User")
                         .WithMany("Companies")
                         .HasForeignKey("UserID");
+                });
+
+            modelBuilder.Entity("HACKTX2018.Models.Order", b =>
+                {
+                    b.HasOne("HACKTX2018.Models.Funder", "Funder")
+                        .WithMany("Orders")
+                        .HasForeignKey("FunderID");
                 });
 
             modelBuilder.Entity("HACKTX2018.Models.OrderDetail", b =>
@@ -160,7 +160,7 @@ namespace HACKTX2018.Migrations
                         .WithMany("OrderDetails")
                         .HasForeignKey("ComapnyCompanyID");
 
-                    b.HasOne("HACKTX2018.Model.Order", "Order")
+                    b.HasOne("HACKTX2018.Models.Order", "Order")
                         .WithMany("OrderDetails")
                         .HasForeignKey("OrderID");
                 });

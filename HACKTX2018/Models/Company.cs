@@ -5,7 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-namespace HACKTX2018.Model
+namespace HACKTX2018.Models
 {
     public class Company
     {

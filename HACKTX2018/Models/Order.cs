@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using HACKTX2018.Models;
 
-namespace HACKTX2018.Model
+namespace HACKTX2018.Models
 {
     public class Order
     {
