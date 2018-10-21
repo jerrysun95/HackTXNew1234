@@ -35,6 +35,9 @@ namespace HACKTX2018.Models
         [Display(Name = "Company Value")]
         public String CompanyValue { get; set; }
 
+        [Display(Name = "Description")]
+        public String Des { get; set; }
+
         public virtual User User { get; set; }
         public virtual List<OrderDetail> OrderDetails { get; set; }
 

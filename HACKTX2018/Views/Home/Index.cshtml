@@ -1,0 +1,66 @@
+﻿@model IEnumerable<HACKTX2018.Models.Organization>
+@{
+    ViewData["ViewData"] = "Index";
+}
+<div class="row">
+    <div class="row-sm-6 col-sm-6">
+        <div class="thumbnail">
+            <img src="images/Photo1.jpg" alt="am i being called?" width="250">
+            <div class="caption">
+                <h3>Marble Co.</h3>
+                <p> A meow-ful company</p>
+                    <div class="col-sm-6 col-sm-6 ">
+                        <h5>Backing Progress</h5>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                 style="width: 60%;">
+                                60%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-3" style="padding-top: 2%;padding-bottom: 2%">
+                    <a href="/Organizations/Details/1" class="btn btn-primary" role="button">See More</a>
+                    </div>
+
+                    <div class="caption">
+                        <img src="images/Photo2.jpg" alt="am i being called?" width="250">
+                        <h3>Bad Marble LLC.</h3>
+                        <p> I scartch company</p>
+                        <div class="col-sm-6 col-sm-6 ">
+                            <h5>Backing Progress</h5>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                     style="width: 80%;">
+                                    80%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3" style="padding-top: 2%; padding-bottom: 2%">
+                        <a href="/Organizations/Details/2" class="btn btn-primary" role="button">See More</a>
+                        </div>
+                    </div>
+
+                    <div class="caption">
+                        <img src="images/Photo3.jpg" alt="am i being called?" width="250">
+                        <h3>Ninja llc</h3>
+                        <p>I have high IQ</p>
+                        <div class="col-sm-6 col-sm-6 ">
+                            <h5>Backing Progress</h5>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                     style="width: 10%;">
+                                    10%
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-xs-6 col-md-3" style="padding-top: 2%; padding-bottom: 2%">
+                        <a href="/Organizations/Details/3" class="btn btn-primary" role="button">See More</a>
+                         </div>
+                    </div>
+                </div>
+    </div>
+</div>
+
+
+
+<!-- This code works, if anyones sees it, im just trying to use cshtml and loop throught things instead of hard coding-->

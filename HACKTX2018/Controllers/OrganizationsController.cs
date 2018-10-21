@@ -54,7 +54,7 @@ namespace HACKTX2018.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("OrganizationID,Name,Email,PhoneNumber,NumberShares,CompanyValue")] Organization organization)
+        public async Task<IActionResult> Create([Bind("OrganizationID,Name,Email,PhoneNumber,NumberShares,CompanyValue,Des")] Organization organization)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace HACKTX2018.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("OrganizationID,Name,Email,PhoneNumber,NumberShares,CompanyValue")] Organization organization)
+        public async Task<IActionResult> Edit(int id, [Bind("OrganizationID,Name,Email,PhoneNumber,NumberShares,CompanyValue,Des")] Organization organization)
         {
             if (id != organization.OrganizationID)
             {

@@ -8,6 +8,7 @@
     <Folder Include="wwwroot\" />
     <Folder Include="Views\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Views\Home\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,12 +21,13 @@
   <ItemGroup>
     <Content Remove="Views\Companies\company.component.cshtml" />
     <Content Remove="Views\Companies\CompanyComponent.cshtml" />
-    <Content Remove="Views\Users\Create.cshtml" />
     <Content Remove="Views\Companies\Home.cshtml" />
     <Content Remove="Views\Funder\Create.cshtml" />
-    <Content Remove="Views\Users\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Model\EmptyClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Home\marbleco.jpg" />
   </ItemGroup>
 </Project>
