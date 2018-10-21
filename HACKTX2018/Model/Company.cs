@@ -3,6 +3,7 @@
 // HW4, MVC Supplier
 
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 namespace HACKTX2018.Models
 {
@@ -33,6 +34,8 @@ namespace HACKTX2018.Models
         [Display(Name = "Company Value")]
         public String CompanyValue { get; set; }
 
+        public virtual User User { get; set; }
+        public virtual List<OrderDetail> OrderDetails { get; set; }
 
     }
 }

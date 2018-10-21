@@ -3,7 +3,10 @@
 // HW4, MVC Supplier
 
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using HACKTX2018.Model;
+
 namespace HACKTX2018.Models
 {
     public class Funder
@@ -28,6 +31,8 @@ namespace HACKTX2018.Models
         [Required(ErrorMessage = "Credit Card is required")]
         [Display(Name = "Credit Card")]
         public String CreditCard { get; set; }
+
+        public virtual List<Order> Orders { get; set; }
 
     }
 }

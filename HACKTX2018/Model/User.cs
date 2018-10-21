@@ -3,6 +3,7 @@
 // HW4, MVC Supplier
 
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 namespace HACKTX2018.Models
 {
@@ -24,6 +25,9 @@ namespace HACKTX2018.Models
         [Display(Name = "Phone Number")]
         [DisplayFormat(DataFormatString = "{0:###-###-####}", ApplyFormatInEditMode = true)]
         public String PhoneNumber { get; set; }
+
+        public virtual List<Company> Companies { get; set; }
+
 
 
     }

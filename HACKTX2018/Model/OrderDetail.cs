@@ -4,6 +4,8 @@
 
 using System;
 using System.ComponentModel.DataAnnotations;
+using HACKTX2018.Model;
+
 namespace HACKTX2018.Models
 {
     public class OrderDetail
@@ -28,6 +30,9 @@ namespace HACKTX2018.Models
         [Required(ErrorMessage = "Number of Shares is needed")]
         [Display(Name = "Share Amount")]
         public String ShareAmount { get; set; }
+
+        public virtual Order Order { get; set; }
+        public virtual Company Comapny { get; set; }
 
 
     }

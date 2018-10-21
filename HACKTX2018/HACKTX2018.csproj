@@ -22,4 +22,7 @@
     <Content Remove="Views\Companies\CompanyComponent.cshtml" />
     <Content Remove="Views\Users\Create.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Model\EmptyClass.cs" />
+  </ItemGroup>
 </Project>
